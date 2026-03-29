@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
 # ── Load Data ────────────────────────────────────────────────────────────────
-df = pd.read_csv("expenses.csv")
+df = pd.read_csv("expenses.csv", sep="\t")  # 👈 tab separator
 df["Date"] = pd.to_datetime(df["Date"], format="%d-%b-%y")  # 👈 %y for 2-digit year
 df["Amount"] = pd.to_numeric(df["Amount"])
 
