@@ -7,7 +7,7 @@ from datetime import datetime
 
 # ── Load Data ────────────────────────────────────────────────────────────────
 df = pd.read_csv("expenses.csv")
-df["Date"] = pd.to_datetime(df["Date"], format="%d-%b-%Y")
+df["Date"] = pd.to_datetime(df["Date"], format="%d-%b-%y")  # 👈 %y for 2-digit year
 df["Amount"] = pd.to_numeric(df["Amount"])
 
 # ── Filter Last Month ────────────────────────────────────────────────────────
@@ -96,3 +96,12 @@ if __name__ == "__main__":
     html = build_html(filtered_df, total, month_name)
     send_email(html, month_name, total)
     print(f"Total expenses for {month_name}: ₹{total:,.0f}")
+```
+
+---
+
+## ✅ Your CSV stays exactly as you made it:
+```
+Date	Category	Description	Amount
+1-Jan-26	Utilities & Bills	Electricity Bill	2500
+5-Jan-26	Utilities & Bills	Water Bill	800
