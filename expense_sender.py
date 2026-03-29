@@ -96,12 +96,3 @@ if __name__ == "__main__":
     html = build_html(filtered_df, total, month_name)
     send_email(html, month_name, total)
     print(f"Total expenses for {month_name}: ₹{total:,.0f}")
-```
-
----
-
-## ✅ Your CSV stays exactly as you made it:
-```
-Date	Category	Description	Amount
-1-Jan-26	Utilities & Bills	Electricity Bill	2500
-5-Jan-26	Utilities & Bills	Water Bill	800
