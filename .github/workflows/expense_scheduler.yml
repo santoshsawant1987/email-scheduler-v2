@@ -74,13 +74,3 @@ jobs:
           PASSWORD_API_KEY: ${{ secrets.PASSWORD_API_KEY }}
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
-```
-
----
-
-## 📋 Update `requirements.txt`
-```
-python-dotenv
-pandas
-requests
-numpy
